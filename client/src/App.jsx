@@ -178,22 +178,22 @@ const [filterStatus, setFilterStatus] =
   };
 
   const deleteTask = async (taskId) => {
-    try {
-      await axios.delete(
-      "https://team-task-manager-unqk.onrender.com/api/tasks/${taskId}`,
-        {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
-        }
-      );
+  try {
+    await axios.delete(
+      `https://team-task-manager-unqk.onrender.com/api/tasks/${taskId}`,
+      {
+        headers: {
+          authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
-      fetchTasks();
-      fetchDashboard();
-    } catch (error) {
-      console.log(error);
-    }
-  };
+    fetchTasks();
+    fetchDashboard();
+  } catch (error) {
+    console.log(error);
+  }
+};
   const filteredTasks = tasks.filter((task) => {
   const matchesSearch =
     task.title
