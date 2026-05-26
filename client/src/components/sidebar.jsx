@@ -91,7 +91,7 @@ function Sidebar({
         </p>
 
         <h3 className="font-bold text-lg mt-1">
-          Team Member
+          {localStorage.getItem("role") || "Member"}
         </h3>
       </div>
     </div>

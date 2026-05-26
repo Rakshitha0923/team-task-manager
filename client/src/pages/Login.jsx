@@ -9,7 +9,7 @@ function Login() {
   const loginUser = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://team-task-manager-unqk.onrender.com/api/auth/login",
         {
           email,
           password,
@@ -24,6 +24,11 @@ function Login() {
       localStorage.setItem(
   "user",
   JSON.stringify(response.data.user)
+);
+
+localStorage.setItem(
+  "role",
+  response.data.user.role
 );
 
       window.location.reload();
@@ -70,6 +75,14 @@ function Login() {
           >
             Login
           </button>
+
+          <button
+  onClick={() => window.location.href = "/signup"}
+  className="bg-white text-black py-4 rounded-xl font-bold"
+>
+  Go To Signup
+</button>
+
         </div>
       </div>
     </div>

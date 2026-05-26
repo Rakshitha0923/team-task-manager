@@ -10,7 +10,7 @@ function Signup() {
   const signupUser = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://team-task-manager-unqk.onrender.com/api/auth/signup",
         {
           name,
           email,

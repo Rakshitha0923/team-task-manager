@@ -49,7 +49,7 @@ const [filterStatus, setFilterStatus] =
   const fetchDashboard = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/dashboard",
+        "https://team-task-manager-unqk.onrender.com/api/dashboard",
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -66,7 +66,7 @@ const [filterStatus, setFilterStatus] =
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/tasks",
+        "https://team-task-manager-unqk.onrender.com/api/tasks",
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -83,7 +83,7 @@ const [filterStatus, setFilterStatus] =
   const fetchProjects = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/projects",
+        "https://team-task-manager-unqk.onrender.com/api/projects",
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -106,7 +106,7 @@ const [filterStatus, setFilterStatus] =
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/users",
+        "https://team-task-manager-unqk.onrender.com/api/users",
         {
           headers: {
             authorization: `Bearer ${token}`,
@@ -129,7 +129,7 @@ const [filterStatus, setFilterStatus] =
   const createTask = async () => {
     try {
       await axios.post(
-        "http://localhost:5000/api/tasks",
+        "https://team-task-manager-unqk.onrender.com/api/tasks",
         {
           title,
           description,
@@ -161,7 +161,7 @@ const [filterStatus, setFilterStatus] =
   ) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/tasks/${taskId}`,
+        `https://team-task-manager-unqk.onrender.com/api/tasks/${taskId}`,
         { status },
         {
           headers: {
@@ -180,7 +180,7 @@ const [filterStatus, setFilterStatus] =
   const deleteTask = async (taskId) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/tasks/${taskId}`,
+      "https://team-task-manager-unqk.onrender.com/api/tasks/${taskId}`,
         {
           headers: {
             authorization: `Bearer ${token}`,
